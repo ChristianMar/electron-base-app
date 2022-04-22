@@ -1,0 +1,3 @@
+# .prettierignore
+package.json
+**/webpack.**.js

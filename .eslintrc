@@ -1,0 +1,63 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "classes": true
+    }
+  },
+  "plugins": ["react", "prettier"],
+  "extends": ["plugin:react/recommended", "prettier", "prettier/react"],
+  "globals": {
+    "localStorage": true,
+    "ga": true,
+    "fetch": true,
+    "window": true,
+    "document": true,
+    "Raven": true,
+    "ENV": true
+  },
+  "rules": {
+    "react/display-name": 1,
+    "no-dupe-keys": 2, // disallow duplicate keys when creating object literals
+    "no-empty": 1, // disallow empty statements
+    "no-ex-assign": 1, // disallow assigning to the exception in a catch block
+
+    "no-inner-declarations": 2, // disallow function or variable declarations in nested blocks
+    "no-invalid-regexp": 2, // disallow invalid regular expression strings in the RegExp constructor
+
+    "no-unreachable": 1, // disallow unreachable statements after a return, throw, continue, or break statement
+    "use-isnan": 2, // disallow comparisons with the value NaN
+    "valid-typeof": 1, // Ensure that the results of typeof are compared against a valid string
+
+    "consistent-return": 1, // require return statements to either always or never specify values
+    "default-case": 1, // require default case in switch statements (off by default)
+    "eqeqeq": 1, // require the use of === and !==
+
+    "no-eval": 2, // disallow use of eval()
+    "no-lone-blocks": 1, // disallow unnecessary nested blocks
+    "no-loop-func": 1, // disallow creation of functions within loops
+    "no-native-reassign": 2, // disallow reassignments of native objects
+    "no-redeclare": 2, // disallow declaring the same variable more then once
+
+    "no-unused-vars": 1, // disallow declaration of variables that are not used in the code
+    "no-use-before-define": 1, // disallow use of variables before they are defined
+
+    "camelcase": 1, // require camel case names
+    "comma-spacing": 1, // enforce spacing before and after comma
+    "key-spacing": 1, // enforces spacing between keys and values in object literal properties
+    "no-mixed-spaces-and-tabs": 2, // disallow mixed spaces and tabs for indentation
+    // "no-nested-ternary": 1, // disallow nested ternary expressions (off by default)
+    "no-trailing-spaces": 1, // disallow trailing whitespace at the end of lines
+    "quotes": ["error", "single", { "avoidEscape": true }], // specify whether double or single quotes should be used
+
+    "space-before-function-paren": 0, // require a space before the function paren
+    "keyword-spacing": 1, // require a space after certain keywords (off by default)
+    "space-before-blocks": 1, // require or disallow space before blocks (off by default)
+    "space-in-parens": 0, // require or disallow spaces inside parentheses (off by default)
+
+    "spaced-comment": 1, // require or disallow a space immediately following the // in a line comment (off by default)
+
+    "no-var": 2 // require let or const instead of var (off by default)
+  }
+}

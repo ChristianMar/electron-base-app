@@ -1,0 +1,9 @@
+{
+  "name": "webapp",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {},
+  "resolutions": { "**/ua-parser-js": "0.7.28" },
+  "dependencies": {},
+  "devDependencies": {}
+}
