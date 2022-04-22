@@ -6,6 +6,10 @@ dist/
 */dist/*
 build/
 */build/*
+release
+release-mac
+release-win
+release-linux
 
 *.orig
 .vscode

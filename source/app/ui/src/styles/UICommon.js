@@ -14,7 +14,6 @@ export const MainWrapper = styled.div({
 export const ContentWrapper = styled.div(
   {
     position: 'relative',
-    backgroundColor: process.env.COLOR_BACKGROUND,
     minHeight: 500,
     zIndex: 20,
     width: '100%',

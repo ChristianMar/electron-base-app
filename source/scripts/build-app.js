@@ -83,9 +83,10 @@ describe()
       }. All rights reserved`,
       buildVersion: buildName === 'win' ? version.replace('v', '') : version,
       files: [
+        'build/*',
         '!**/node_modules/**/*',
         {
-          from: './app/webapps/src/',
+          from: './app/webapp/src/',
           to: '.',
           filter: ['package.json'],
         },
@@ -95,7 +96,7 @@ describe()
         buildResources: 'build',
       },
       extraMetadata: {
-        main: 'build/background.min.js',
+        main: 'build/background.js',
       },
       linux: {
         target: linuxTargets,
@@ -125,22 +126,22 @@ describe()
         category: 'public.app-category.productivity',
         target: macTargets,
         artifactName: `${data.PROJECT}-${shortVersion}${'-${arch}.${ext}'}`,
-        icon: 'source/icons/mac/icon.icns',
+        // icon: 'source/icons/mac/icon.icns',
         minimumSystemVersion: '10.6.0',
         hardenedRuntime: true,
         // provisioningProfile: ''
         // type: ''
       },
       dmg: {
-        icon: 'source/icons/mac/icon.icns',
+        // icon: 'source/icons/mac/icon.icns',
       },
-      publish: {
-        provider: 's3',
-        bucket: data.BUCKET_DISTRO,
-        region: data.REGION,
-        path: `/releases/${buildName}`,
-        acl: 'private',
-      },
+      // publish: {
+      //   provider: 's3',
+      //   bucket: data.BUCKET_DISTRO,
+      //   region: data.REGION,
+      //   path: `/releases/${buildName}`,
+      //   acl: 'private',
+      // },
     };
 
     runBuilder()
